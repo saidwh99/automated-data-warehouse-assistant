@@ -1,7 +1,4 @@
-# automated-data-warehouse-assistant
-
-
-
+</> Markdown
 \# Automated Data Warehouse Assistant
 
 
@@ -151,6 +148,22 @@ AI Data Warehouse Assistant
 
 
 \---
+
+## Architecture Diagram
+
+```mermaid
+flowchart TD
+
+A[Snowflake Data Warehouse] --> B[Metadata Ingestion Script]
+B --> C[PostgreSQL Metadata Catalog]
+C --> D[FastAPI Backend APIs]
+D --> E[AI Data Warehouse Assistant]
+
+E --> F[Table Search API]
+E --> G[Column Search API]
+E --> H[Schema Explorer]
+E --> I[LLM Natural Language Queries]
+```
 
 
 
