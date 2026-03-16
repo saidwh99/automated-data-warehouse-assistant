@@ -1,4 +1,3 @@
-</> Markdown
 \# Automated Data Warehouse Assistant
 
 
@@ -163,6 +162,39 @@ E --> F[Table Search API]
 E --> G[Column Search API]
 E --> H[Schema Explorer]
 E --> I[LLM Natural Language Queries]
+```
+
+
+## Demo
+
+Example API queries:
+
+### Get tables
+
+```
+GET /tables
+```
+
+### Search for columns
+
+```
+GET /columns/search?q=price
+```
+
+Example response:
+
+```json
+{
+ "table_name": "STOCK_PRICES",
+ "column_name": "PRICE",
+ "data_type": "FLOAT"
+}
+```
+
+### Ask AI assistant
+
+```
+GET /ask?q=Which table contains price?
 ```
 
 
